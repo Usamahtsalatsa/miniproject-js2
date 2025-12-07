@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek ganjil genap</title>
+    <style>
+    body {
+        background-color: lightyellow;
+        font-family: Comic Sans MS,sans-serif;
+        text-align: center;
+        padding-top: 40px;
+    }    
+    h2 {
+        color: blue;
+    }
+    input {
+        padding: 6px 15px;
+        background-color: lightgreen;
+        border: 2px solid green;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    button {
+        padding: 6px 15px;
+        background-color: greenyellow;
+        border: 2px solid green;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+    button:hover {
+        background-color: yellowgreen;
+    }
+    #hasil {
+        margin-top: 15px;
+        font-size: 20px;
+        color: darkred;
+    }
+    </style>
+</head>
+
+<body>
+    <h2>Program Cek Bilangan Ganjil Genap </h2>
+
+    <label for="angka">Masukan angka : </label>
+    <input type="Number" id="angka" placeholder=" 7">
+    <button onclick="cekAngka ()">Cek</button>
+
+    <p id="hasil"></p> 
+
+    <script>
+        function cekAngka() {
+            let angka = document.getElementById("angka").value;
+
+            if (angka === "") {
+                document.getElementById("hasil").innerHTML = "Harap masukan Angka!"; return;
+            }
+            if (angka % 2 === 0) { document.getElementById("hasil").innerHTML = angka + " Adalah Bilangan Genap."; }
+            else { document.getElementById("hasil").innerHTML = angka + " Adalah Bilangan ganjil."; }
+        }
+    </script>
+</body>
+
+</html>
